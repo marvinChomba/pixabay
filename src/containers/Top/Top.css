@@ -1,0 +1,12 @@
+.Pixa {
+  margin: 0;
+  padding: 0;
+}
+
+.Header {
+  padding-top: 0;
+  margin: 0;
+  background: #607D8B;
+  color: white;
+  height: 100px;
+}

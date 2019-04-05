@@ -1,0 +1,44 @@
+.Form {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  margin-top: 20px;
+}
+.Form input {
+  width: 20%;
+  margin: 10px auto;
+  border: none;
+  border-bottom: 3px solid black;
+  transition: border 0.3s ease-in;
+
+}
+.Form input:focus,
+.Form input:active,
+.Form input:hover {
+  border: none;
+  border-bottom: 3px solid #03A9F4;
+  outline: none;
+}
+.Form button {
+  width: 11%;
+  margin: 15px auto;
+  border: none;
+  background: #03A9F4;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 7px;
+  outline: none;
+  transition: transform 0.1s ease-in;
+}
+.Form button:active {
+  transform: translateY(-4px)
+}
+@media(max-width: 600px) {
+  .Form input {
+    width: 75%;
+  }
+  .Form button {
+    width: 50%;
+  }
+}

@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import classes from './App.css';
+import Pixa from "./containers/Pixa/Pixa"
+import TopImages from "./containers/Top/Top";
+import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div className={classes.App}>
+        <header className={classes.Header}>
+          <h1>Marvo's Image Finder</h1>
         </header>
+        <BrowserRouter>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <NavLink to="/">Top Images</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/search">Search</NavLink>
+                </li>
+              </ul>
+            </nav>
+            <Switch>
+              <Route exact component={TopImages} path="/" />
+              <Route component={Pixa} path="/search" exact/>
+            </Switch>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
